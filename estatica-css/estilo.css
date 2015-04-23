@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+h1{
+	font-family:"Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size:24px;
+}
+p{
+	font-family:Gotham, sans-serif;
+	font-size:14px;
+	color:#5F0001;
+}
+body{
+	background-color:#D1D3FF;
+}
+a{
+	color:#0B2D88;
+}

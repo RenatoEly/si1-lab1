@@ -21,8 +21,8 @@
         <a href="obrigado.html">Contribuição</a>
       </li>
     </ul>
-    <h1>Sistemas de Informação 1</h1>
-    <h3>Suas expectativas</h3>
+    <h1 align="center">Sistemas de Informação 1</h1>
+    <h3 align="center">Suas expectativas</h3>
   </header>
   <div class="row">
     <div role="main">
@@ -65,7 +65,7 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	$( "#materia" ).keyup(function( event ) {
-		if(event.keyCode == 13){
+		if(event.keyCode == 13 && $("#materia").val().trim() != ""){
 			var conteudo = $("#materia").val();
 			$("#tabela1").append(
 					"<tr>" +

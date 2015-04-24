@@ -65,7 +65,7 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	$( "#materia" ).keyup(function( event ) {
-		if(event.keyCode == 13){
+		if(event.keyCode == 13 && $("#materia").val().trim() != ""){
 			var conteudo = $("#materia").val();
 			$("#tabela1").append(
 					"<tr>" +

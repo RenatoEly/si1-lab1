@@ -4,41 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-	$( "#materia" ).keyup(function( event ) {
-		if(event.keyCode == 13){
-			var assunto = $("#materia").val();
-		$("#tabela1").append(
-					"<tr>" +
-					"<td>"+ assunto + "</td>" +
-					"<td>   <a href='javascript:void(0);' class='btn btn-danger remover'>Remover</a>" + "	"+
-					"<a href='javascript:void(0);' value="+"'"+ assunto+"'"+" class='btn btn-primary mover'>Mover</a>" +
-					"</td>"+
-					"</tr>");
-		
-		$("#materia").val("");
-		}
-});
-$(document).on('click', 'a.remover', function () {
-		$(this).closest('tr').remove();
-	});
-	$(document).on('click', 'a.mover', function () {
-		var assunto = $(this).attr('value');
-		$("#tabela2").append(
-				"<tr>" +
-				"<td>"+ assunto + "</td>" +
-				"<td>   <a href='javascript:void(0);' class='btn btn-danger remover'> Remover</a>" +
-				"</td>"+
-				"</tr>");
-		$(this).closest('tr').remove();
-	});
-});
- 
-
-</script>
 <title>SI1</title>
 </head>
 
@@ -52,53 +17,80 @@ $(document).on('click', 'a.remover', function () {
       <li role="presentation">
         <a href="cadastro.html">Cadastro</a>
       </li>
+      <li role="presentation" class="active">
+        <a href="obrigado.html">Contribuição</a>
+      </li>
     </ul>
     <h1>Sistemas de Informação 1</h1>
-    <h3>Slogan aqui</h3>
+    <h3>Suas expectativas</h3>
   </header>
   <div class="row">
     <div role="main">
-    <h3>O que você gostaria de aprender?</h3>
+      <h3>O que você gostaria de aprender?</h3>
       <input id="materia" name="materia" type="text" placeholder="Digite e pressione ENTER" style="width: 30%">
       <br>
       <br>
       <br>
       <table class="table" id="tabela1">
-				<thead>
-				<tr>
-					<th>Gostaria de aprender:</th>
-					
-				</tr>
-				</thead>
-
-				<tbody>
-				<tr></tr>
-				</tbody>
-				
-			</table>
-
-			<br>
-			<br>
-            
-			<table class="table" id="tabela2">
-				<thead>
-				<tr>
-					<th>Já aprendi:</th>
-				</tr>
-				</thead>
-
-				<tbody>
-
-				<tr></tr>
-				</tbody>
-			
-			</table>
-            
+        <thead>
+          <tr>
+            <th>Gostaria de aprender:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr></tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <table class="table" id="tabela2">
+        <thead>
+          <tr>
+            <th>Já aprendi:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr></tr>
+        </tbody>
+      </table>
     </div>
   </div>
   <footer class="row">
-  <p>Desenvolvido por Renato Ely</p>
+    <p>Desenvolvido por Renato Ely</p>
   </footer>
 </div>
 </body>
+
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$( "#materia" ).keyup(function( event ) {
+		if(event.keyCode == 13){
+			var conteudo = $("#materia").val();
+			$("#tabela1").append(
+					"<tr>" +
+					"<td>"+ conteudo + "</td>" +
+					"<td>   <a href='javascript:void(0);' class='btn btn-danger remover'>Remover</a>" + "	"+
+					"<a href='javascript:void(0);' value="+"'"+conteudo+"'"+" class='btn btn-primary mover'>Mover</a>" +
+					"</td>"+
+					"</tr>");
+		
+			$("#materia").val("");
+		}
+});
+	$(document).on('click', 'a.remover', function () {
+		$(this).closest('tr').remove();
+	});
+	$(document).on('click', 'a.mover', function () {
+		var conteudo = $(this).attr('value');
+		$("#tabela2").append(
+				"<tr>" +
+				"<td>"+ conteudo + "</td>" +
+				"<td>   <a href='javascript:void(0);' class='btn btn-danger remover'> Remover</a>" +
+				"</td>"+
+				"</tr>");
+		$(this).closest('tr').remove();
+	});
+});
+</script>
 </html>
